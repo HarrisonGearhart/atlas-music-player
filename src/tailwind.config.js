@@ -1,12 +1,15 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-    content: ["./index.html", "./src/**/*.{js,jsx}"],
+// tailwind.config.js
+export default {
+    darkMode: 'class', // 'class' to allow manual toggle
     theme: {
       extend: {
         colors: {
-          emerald: "var(--color-emerald)",
-          amethyst: "var(--color-amethyst)",
-          azure: "var(--color-azure)",
+          primary: '#1fb6ff',   // main container / accent
+          secondary: '#ff49db', // buttons / progress fill
+          bgMain: '#2d2d2d',    // dark background
+          textMain: '#f5f5f5',  // dark mode text
+          lightBg: '#f9f9f9',   // light background
+          lightText: '#111827', // light mode text
         },
       },
     },

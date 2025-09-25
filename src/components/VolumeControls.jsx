@@ -7,7 +7,7 @@ export default function VolumeControls() {
         type="range"
         min="0"
         max="100"
-        className="w-full accent-var(--color-emerald)"
+        className="w-full accent-emerald dark:accent-amethyst transition-colors duration-300"
       />
     </div>
   );

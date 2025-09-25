@@ -4,11 +4,21 @@
   --color-emerald: #2ecc71;
   --color-amethyst: #9b59b6;
   --color-azure: #3498db;
+
+  /* Dark mode variants */
+  --color-bg-dark: #1e1e2f;
+  --color-text-dark: #f5f5f5;
 }
 
 body {
   background-color: var(--color-azure);
   color: var(--color-emerald);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark body {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
 }
 
 button {

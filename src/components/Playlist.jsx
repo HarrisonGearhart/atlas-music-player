@@ -1,5 +1,5 @@
 import React from "react";
-import PlayListItem from "./PlayListItem";
+import PlayListItem from "./PlaylistItem";
 
 export default function Playlist() {
   const songs = [
@@ -10,7 +10,7 @@ export default function Playlist() {
   ];
 
   return (
-    <div className="flex flex-col gap-2 p-6 bg-var(--color-azure) rounded-xl shadow-lg w-80 text-white">
+    <div className="flex flex-col gap-2 p-6 bg-azure dark:bg-bg-dark rounded-xl shadow-lg w-80 text-white transition-colors duration-300">
       {songs.map((song, index) => (
         <PlayListItem
           key={index}
