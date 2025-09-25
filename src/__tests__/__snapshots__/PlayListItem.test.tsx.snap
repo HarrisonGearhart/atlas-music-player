@@ -1,0 +1,80 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PlayListItem Component > renders selected item with custom highlight 1`] = `
+<div
+  class="flex justify-between items-center px-4 py-2 cursor-pointer transition-colors"
+  style="background-color: rgb(46, 204, 113); color: rgb(255, 255, 255);"
+>
+  <div
+    class="flex flex-col"
+  >
+    <p
+      class="text-sm font-medium"
+    >
+      Test
+    </p>
+    <p
+      class="text-xs"
+    >
+      Artist
+    </p>
+  </div>
+  <span
+    class="text-xs"
+  >
+    4:00
+  </span>
+</div>
+`;
+
+exports[`PlayListItem Component > renders unselected item with custom props 1`] = `
+<div
+  class="flex justify-between items-center px-4 py-2 cursor-pointer transition-colors"
+>
+  <div
+    class="flex flex-col"
+  >
+    <p
+      class="text-sm font-medium"
+    >
+      Song
+    </p>
+    <p
+      class="text-xs"
+    >
+      Someone
+    </p>
+  </div>
+  <span
+    class="text-xs"
+  >
+    3:30
+  </span>
+</div>
+`;
+
+exports[`PlayListItem Component > renders with default props 1`] = `
+<div
+  class="flex justify-between items-center px-4 py-2 cursor-pointer transition-colors"
+>
+  <div
+    class="flex flex-col"
+  >
+    <p
+      class="text-sm font-medium"
+    >
+      Song Title
+    </p>
+    <p
+      class="text-xs"
+    >
+      Artist
+    </p>
+  </div>
+  <span
+    class="text-xs"
+  >
+    3:45
+  </span>
+</div>
+`;

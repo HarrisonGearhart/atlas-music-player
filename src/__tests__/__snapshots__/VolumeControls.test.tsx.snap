@@ -1,0 +1,52 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`VolumeControls Component > renders with default volume 50 1`] = `
+<div
+  class="flex flex-col items-start text-left"
+>
+  <h2
+    class="text-lg font-bold text-[var(--color-azure)] -ml-1"
+  >
+    Song Title
+  </h2>
+  <p
+    class="text-sm text-[var(--color-amethyst)] -ml-1"
+  >
+    Artist
+  </p>
+</div>
+`;
+
+exports[`VolumeControls Component > renders with volume 0 1`] = `
+<div
+  class="flex flex-col items-start text-left"
+>
+  <h2
+    class="text-lg font-bold text-[var(--color-azure)] -ml-1"
+  >
+    Song Title
+  </h2>
+  <p
+    class="text-sm text-[var(--color-amethyst)] -ml-1"
+  >
+    Artist
+  </p>
+</div>
+`;
+
+exports[`VolumeControls Component > renders with volume 100 1`] = `
+<div
+  class="flex flex-col items-start text-left"
+>
+  <h2
+    class="text-lg font-bold text-[var(--color-azure)] -ml-1"
+  >
+    Song Title
+  </h2>
+  <p
+    class="text-sm text-[var(--color-amethyst)] -ml-1"
+  >
+    Artist
+  </p>
+</div>
+`;
