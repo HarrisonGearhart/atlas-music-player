@@ -2,18 +2,25 @@
 
 /* Light mode colors */
 :root {
-  --color-midnight: #121063;     /* background */
-  --color-emerald: #2ecc71;      /* primary highlight */
-  --color-amethyst: #9b59b6;     /* secondary highlight */
-  --color-azure: #3498db;        /* tertiary highlight / text accent */
-  --color-text: #ffffff;          /* main text color */
+  --color-midnight: #f0ead6;     /* eggshell white background */
+  --color-emerald: #2ecc71;
+  --color-amethyst: #9b59b6;
+  --color-azure: #3498db;
+  --color-text: #121063;          /* dark text */
 }
 
 /* Dark mode colors */
 .dark {
-  --color-midnight: #0b0b1a;     /* dark background */
-  --color-emerald: #27ae60;      /* slightly darker emerald for contrast */
-  --color-amethyst: #8e44ad;     /* slightly darker amethyst */
-  --color-azure: #2980b9;        /* slightly darker azure */
-  --color-text: #e5e5e5;          /* lighter text on dark background */
+  --color-midnight: #0b0b1a;     /* midnight background */
+  --color-emerald: #27ae60;
+  --color-amethyst: #8e44ad;
+  --color-azure: #2980b9;
+  --color-text: #e5e5e5;         /* light text */
+}
+
+/* Apply to body */
+body {
+  background-color: var(--color-midnight);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
