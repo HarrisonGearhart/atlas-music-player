@@ -1,22 +1,19 @@
 import React from "react";
 
-export default function PlayListItem({
-  title = "Song Title",
-  artist = "Artist",
-  length = "3:45",
-  selected = false,
-}) {
+export default function PlayListItem({ title, artist, length, selected }) {
   return (
     <div
       className={`flex justify-between items-center px-4 py-2 rounded-md cursor-pointer ${
-        selected ? "bg-gray-200" : "hover:bg-gray-100"
+        selected
+          ? "bg-var(--color-emerald)"
+          : "hover:bg-var(--color-amethyst) transition"
       }`}
     >
       <div>
-        <p className="text-sm font-medium text-gray-900">{title}</p>
-        <p className="text-xs text-gray-600">{artist}</p>
+        <p className="text-sm font-medium">{title}</p>
+        <p className="text-xs">{artist}</p>
       </div>
-      <span className="text-xs text-gray-500">{length}</span>
+      <span className="text-xs">{length}</span>
     </div>
   );
 }

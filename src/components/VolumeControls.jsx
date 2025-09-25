@@ -7,7 +7,7 @@ export default function VolumeControls() {
         type="range"
         min="0"
         max="100"
-        className="w-full accent-gray-700"
+        className="w-full accent-var(--color-emerald)"
       />
     </div>
   );

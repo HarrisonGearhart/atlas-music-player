@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+:root {
+  --color-emerald: #2ecc71;
+  --color-amethyst: #9b59b6;
+  --color-azure: #3498db;
+}
+
+body {
+  background-color: var(--color-azure);
+  color: var(--color-emerald);
+}
+
+button {
+  transition: all 0.2s ease-in-out;
+}

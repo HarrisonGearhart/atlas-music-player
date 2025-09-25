@@ -10,14 +10,14 @@ export default function Playlist() {
   ];
 
   return (
-    <div className="flex flex-col gap-2 p-6 bg-white rounded-xl shadow w-80">
+    <div className="flex flex-col gap-2 p-6 bg-var(--color-azure) rounded-xl shadow-lg w-80 text-white">
       {songs.map((song, index) => (
         <PlayListItem
           key={index}
           title={song.title}
           artist={song.artist}
           length={song.length}
-          selected={index === 0} // highlight the first one
+          selected={index === 0}
         />
       ))}
     </div>
