@@ -2,51 +2,234 @@
 
 exports[`VolumeControls Component > renders with default volume 50 1`] = `
 <div
-  class="flex flex-col items-start text-left"
+  class="flex flex-col gap-4"
 >
-  <h2
-    class="text-lg font-bold text-[var(--color-azure)] -ml-1"
+  <div
+    class="flex items-center gap-2"
   >
-    Song Title
-  </h2>
-  <p
-    class="text-sm text-[var(--color-amethyst)] -ml-1"
+    <label
+      class="text-sm text-[var(--color-text)]"
+    >
+      Volume:
+    </label>
+    <input
+      class="w-full"
+      max="100"
+      min="0"
+      type="range"
+      value="50"
+    />
+    <span
+      class="text-sm"
+    >
+      50
+      %
+    </span>
+  </div>
+  <div
+    class="flex items-center gap-2"
   >
-    Artist
-  </p>
+    <label
+      class="text-sm text-[var(--color-text)]"
+    >
+      Speed:
+    </label>
+    <select
+      class="px-2 py-1 rounded border border-gray-400 bg-[var(--color-midnight)] text-[var(--color-text)]"
+    >
+      <option
+        value="0.5"
+      >
+        0.5
+        x
+      </option>
+      <option
+        value="0.75"
+      >
+        0.75
+        x
+      </option>
+      <option
+        value="1"
+      >
+        1
+        x
+      </option>
+      <option
+        value="1.25"
+      >
+        1.25
+        x
+      </option>
+      <option
+        value="1.5"
+      >
+        1.5
+        x
+      </option>
+      <option
+        value="2"
+      >
+        2
+        x
+      </option>
+    </select>
+  </div>
 </div>
 `;
 
 exports[`VolumeControls Component > renders with volume 0 1`] = `
 <div
-  class="flex flex-col items-start text-left"
+  class="flex flex-col gap-4"
 >
-  <h2
-    class="text-lg font-bold text-[var(--color-azure)] -ml-1"
+  <div
+    class="flex items-center gap-2"
   >
-    Song Title
-  </h2>
-  <p
-    class="text-sm text-[var(--color-amethyst)] -ml-1"
+    <label
+      class="text-sm text-[var(--color-text)]"
+    >
+      Volume:
+    </label>
+    <input
+      class="w-full"
+      max="100"
+      min="0"
+      type="range"
+      value="0"
+    />
+    <span
+      class="text-sm"
+    >
+      0
+      %
+    </span>
+  </div>
+  <div
+    class="flex items-center gap-2"
   >
-    Artist
-  </p>
+    <label
+      class="text-sm text-[var(--color-text)]"
+    >
+      Speed:
+    </label>
+    <select
+      class="px-2 py-1 rounded border border-gray-400 bg-[var(--color-midnight)] text-[var(--color-text)]"
+    >
+      <option
+        value="0.5"
+      >
+        0.5
+        x
+      </option>
+      <option
+        value="0.75"
+      >
+        0.75
+        x
+      </option>
+      <option
+        value="1"
+      >
+        1
+        x
+      </option>
+      <option
+        value="1.25"
+      >
+        1.25
+        x
+      </option>
+      <option
+        value="1.5"
+      >
+        1.5
+        x
+      </option>
+      <option
+        value="2"
+      >
+        2
+        x
+      </option>
+    </select>
+  </div>
 </div>
 `;
 
 exports[`VolumeControls Component > renders with volume 100 1`] = `
 <div
-  class="flex flex-col items-start text-left"
+  class="flex flex-col gap-4"
 >
-  <h2
-    class="text-lg font-bold text-[var(--color-azure)] -ml-1"
+  <div
+    class="flex items-center gap-2"
   >
-    Song Title
-  </h2>
-  <p
-    class="text-sm text-[var(--color-amethyst)] -ml-1"
+    <label
+      class="text-sm text-[var(--color-text)]"
+    >
+      Volume:
+    </label>
+    <input
+      class="w-full"
+      max="100"
+      min="0"
+      type="range"
+      value="100"
+    />
+    <span
+      class="text-sm"
+    >
+      100
+      %
+    </span>
+  </div>
+  <div
+    class="flex items-center gap-2"
   >
-    Artist
-  </p>
+    <label
+      class="text-sm text-[var(--color-text)]"
+    >
+      Speed:
+    </label>
+    <select
+      class="px-2 py-1 rounded border border-gray-400 bg-[var(--color-midnight)] text-[var(--color-text)]"
+    >
+      <option
+        value="0.5"
+      >
+        0.5
+        x
+      </option>
+      <option
+        value="0.75"
+      >
+        0.75
+        x
+      </option>
+      <option
+        value="1"
+      >
+        1
+        x
+      </option>
+      <option
+        value="1.25"
+      >
+        1.25
+        x
+      </option>
+      <option
+        value="1.5"
+      >
+        1.5
+        x
+      </option>
+      <option
+        value="2"
+      >
+        2
+        x
+      </option>
+    </select>
+  </div>
 </div>
 `;
