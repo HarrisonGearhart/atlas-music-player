@@ -6,12 +6,12 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "src"), // now @ points to src/
+      "@": path.resolve(__dirname, "src"), // @ points to src/
     },
   },
   test: {
     globals: true,
     environment: "jsdom",
-    setupFiles: "./src/__tests__/vitest.setup.ts", // updated path to setup file
+    setupFiles: "./src/__tests__/vitest.setup.ts", // <- correct path to setup
   },
 });
