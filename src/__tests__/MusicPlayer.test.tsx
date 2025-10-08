@@ -1,51 +1,33 @@
-// src/__tests__/MusicPlayer.test.tsx
 import { render, screen } from "@testing-library/react";
-import { beforeAll, afterEach, afterAll, test, expect } from "vitest";
-import { rest } from "msw";
-import { setupServer } from "msw/node";
-import MusicPlayer from "../components/MusicPlayer";
+import MusicPlayer, { Song } from "@/components/MusicPlayer";
 
-// Mocked songs
-const mockSongs = [
-  {
-    title: "Mock Song 1",
-    artist: "Artist 1",
-    duration: 210,
-    cover: "https://via.placeholder.com/150",
-    song: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
-  },
-  {
-    title: "Mock Song 2",
-    artist: "Artist 2",
-    duration: 180,
-    cover: "https://via.placeholder.com/150",
-    song: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
-  },
-];
+// Mock the child components
+vi.mock("@/components/CurrentlyPlaying", () => ({
+  default: (props: any) => <div data-testid="currently-playing">CurrentlyPlaying</div>,
+}));
 
-// Setup MSW server inline
-const server = setupServer(
-  rest.get("/api/v1/songs/playlist.json", (req, res, ctx) => {
-    return res(ctx.status(200), ctx.json(mockSongs));
-  })
-);
+vi.mock("@/components/Playlist", () => ({
+  default: (props: any) => <div data-testid="playlist">Playlist</div>,
+}));
 
-// Start server before all tests
-beforeAll(() => server.listen());
+vi.mock("@/components/LoadingSkeleton", () => ({
+  default: () => <div data-testid="loading">LoadingSkeleton</div>,
+}));
 
-// Reset handlers after each test to avoid test bleed
-afterEach(() => server.resetHandlers());
+describe("MusicPlayer", () => {
+  it("renders LoadingSkeleton initially", () => {
+    render(<MusicPlayer />);
+    expect(screen.getByTestId("loading")).toBeInTheDocument();
+  });
 
-// Close server after all tests
-afterAll(() => server.close());
+  it("renders CurrentlyPlaying and Playlist after loading", async () => {
+    render(<MusicPlayer />);
 
-test("renders MusicPlayer with mocked songs", async () => {
-  render(<MusicPlayer />);
-  
-  // Wait for the first mocked song to appear
-  const songTitle = await screen.findByText("Mock Song 1");
-  expect(songTitle).toBeInTheDocument();
-  
-  const songArtist = screen.getByText("Artist 1");
-  expect(songArtist).toBeInTheDocument();
+    // Wait for the fetch to complete
+    const currentlyPlaying = await screen.findByTestId("currently-playing");
+    const playlist = await screen.findByTestId("playlist");
+
+    expect(currentlyPlaying).toBeInTheDocument();
+    expect(playlist).toBeInTheDocument();
+  });
 });

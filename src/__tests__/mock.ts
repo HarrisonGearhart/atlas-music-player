@@ -1,7 +1,7 @@
-// src/__tests__/mock.ts
 import { setupServer } from "msw/node";
 import { http, HttpResponse } from "msw";
 
+// Sample playlist used for mocking API responses
 export const mockPlaylist = [
   {
     id: '1',
@@ -32,13 +32,27 @@ export const mockPlaylist = [
   }
 ];
 
+// Define the mock API routes
 export const handlers = [
-  http.get("/api/playlist", () => HttpResponse.json(mockPlaylist)),
+  // Returns the full playlist when the playlist endpoint is called
+  http.get("/api/playlist", () => {
+    return HttpResponse.json(mockPlaylist);
+  }),
+
+  // Returns a specific song by ID; responds with 404 if not found
   http.get("/api/song/:id", ({ params }) => {
     const song = mockPlaylist.find(s => s.id === params.id);
-    return song ? HttpResponse.json(song) : new HttpResponse(null, { status: 404 });
+    if (!song) {
+      return new HttpResponse(null, { status: 404 });
+    }
+    return HttpResponse.json(song);
   }),
-  http.get("/api/lyrics/:id", () => HttpResponse.json({ lyrics: "Test lyrics content" })),
+
+  // Returns placeholder lyrics for any song ID requested
+  http.get("/api/lyrics/:id", () => {
+    return HttpResponse.json({ lyrics: 'Test lyrics content' });
+  }),
 ];
 
+// Create and export the MSW server instance with the handlers
 export const server = setupServer(...handlers);
